@@ -1,3 +1,4 @@
+use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 use bcrypt;
 use std::{
     collections::HashMap,
@@ -35,8 +36,18 @@ impl UserDB {
     }
 }
 
-fn main() {
-    println!("Hello World!")
+async fn login() -> impl Responder {
+    "Hello World"
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    HttpServer::new(|| {
+        App::new().service(web::scope("/api/v1").route("/login", web::post().to(login)))
+    })
+    .bind("0.0.0.0:8080")?
+    .run()
+    .await
 }
 
 #[cfg(test)]
