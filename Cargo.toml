@@ -13,6 +13,6 @@ lto = "fat"
 
 [dependencies]
 bcrypt = "0.4.0"
-actix-web = "3"
-serde = "1"
-lazy_static = "1"
+actix-web = "3.3.2"
+serde = "1.0.119"
+lazy_static = "1.4.0"

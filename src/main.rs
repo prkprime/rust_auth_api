@@ -95,7 +95,7 @@ async fn main() -> std::io::Result<()> {
                 .route("/register", web::post().to(register)),
         )
     })
-    .bind("0.0.0.0:8080")?
+    .bind("0.0.0.0:6969")?
     .run()
     .await
 }
