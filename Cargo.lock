@@ -1402,6 +1402,8 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "bcrypt",
+ "lazy_static",
+ "serde",
 ]
 
 [[package]]
